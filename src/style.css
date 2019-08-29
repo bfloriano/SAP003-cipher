@@ -1,0 +1,109 @@
+/*
+* {
+    color: pink; 
+    display: inline-block; 
+}
+*/
+
+body {
+    background-color: #000000; 
+    background-image: url("theme.jpg");
+    background-position: bottom;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-size: 520px;
+} 
+
+#root {
+    fill: rgba(255, 255, 255, 0.904);
+    text-shadow: 2px 2px 1px  rgba(255, 16, 96, 0.788);
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 35px;
+} 
+#curve {
+    fill: transparent;
+}
+
+.caixas {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; 
+    /* align-content: center; */
+    
+}
+    .caixa1 {
+        background-color: rgba(255, 255, 255, 0.705);
+        color:  rgba(184, 17, 73, 0.788);
+        text-shadow: 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.788);
+        margin: 5px 5px 5px 5px;
+        padding: 5px 5px 25px 5px; 
+        width: 400px;  
+        border-radius: 5px;
+    } 
+    .caixa2 {
+        background-color: rgba(255, 255, 255, 0.705);
+        margin: 5px 5px 5px 5px;
+        padding: 5px 5px 5px 5px; 
+        width: 400px;  
+        border-radius: 5px;
+        /* align-items: center; */
+    }    
+    #result {
+        word-break: break-all;
+        padding: 5px 5px 5px 5px; 
+        /* width: 50px; */
+    }
+    #msg {
+        text-align: center;
+    }
+
+    #result2 {
+        word-break: break-all;
+        padding: 5px 5px 5px 5px; 
+        /* margin: 5px 5px 5px 5px; */
+    }
+    #msg2 {
+        text-align: center;
+    }
+    
+.caixa3 {
+    display: inherit;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.685);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    height: 80px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+#offset {
+    text-align: center;
+    width: 50px;
+    border-color: rgb(206, 28, 96);
+    
+}
+
+.botons {
+    text-align: center;
+}
+
+    #bot1 {
+        color: white;
+        background: rgba(255, 16, 96, 0.788);
+        border-radius: 50px;
+}
+    #bot1:hover {
+        background: black;
+}
+
+    #bot2 {
+        color: white;
+        background: rgba(255, 16, 96, 0.788);
+        border-radius: 50px;
+}
+    #bot2:hover {
+        background: black;
+}
