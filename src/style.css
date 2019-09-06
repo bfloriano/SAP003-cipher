@@ -12,6 +12,7 @@ body {
     fill: transparent;
 }
 
+
 .caixas {
     display: flex;
     justify-content: space-between;
@@ -22,48 +23,49 @@ body {
     background-size: 45%;
     align-content: center;
 }
-    .caixa1 {
-        background-color: rgba(255, 255, 255, 0.705);
-        color:  rgba(184, 17, 73, 0.788);
-        text-shadow: 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.788);
-        margin: 5px 5px 5px 5px;
-        padding: 5px 5px 25px 5px; 
-        width: 400px;  
-        border-radius: 5px;
-    } 
-    .caixa2 {
-        background-color: rgba(255, 255, 255, 0.705);
-        color:  rgba(184, 17, 73, 0.788);
-        text-shadow: 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.788);
-        margin: 5px 5px 5px 5px;
-        padding: 5px 5px 5px 5px; 
-        width: 400px;  
-        border-radius: 5px;
-    }   
+.entrada {
+    background-color: rgba(255, 255, 255, 0.705);
+    color:  rgba(184, 17, 73, 0.788);
+    text-shadow: 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.788);
+    margin: 5px;
+    padding: 5px 5px 25px 5px; 
+    width: 400px;  
+    border-radius: 5px;
+} 
+.saida {
+    background-color: rgba(255, 255, 255, 0.705);
+    color:  rgba(184, 17, 73, 0.788);
+    text-shadow: 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.788);
+    margin: 5px;
+    padding: 5px 5px 5px 5px; 
+    width: 400px;  
+    border-radius: 5px;    
+}   
 
-    #result {
-        word-break: break-all;
-        padding: 5px 5px 5px 5px; 
-        color:  rgb(0, 0, 0);
-        text-shadow: 0px 0px 0px  rgba(0, 0, 0, 0.788);
-    }
-    #msg {
-        text-align: center;
-        border-color:  rgba(206, 28, 96, 0.582);
-    }
 
-    #result2 {
-        word-break: break-all;
-        padding: 5px 5px 5px 5px; 
-        color:  rgb(0, 0, 0);
-        text-shadow: 0px 0px 0px  rgba(0, 0, 0, 0.788);
-    }
-    #msg2 {
-        text-align: center;
-        border-color:  rgba(206, 28, 96, 0.582);
-    }
+#resultcode {
+    word-break: break-all;
+    padding: 5px 5px 5px 5px; 
+    color:  rgb(0, 0, 0);
+    text-shadow: 0px 0px 0px  rgba(0, 0, 0, 0.788);
+}
+#msgcode {
+    text-align: center;
+    border-color:  rgba(206, 28, 96, 0.582);
+}
+
+#resultdecode {
+    word-break: break-all;
+    padding: 5px 5px 5px 5px; 
+    color:  rgb(0, 0, 0);
+    text-shadow: 0px 0px 0px  rgba(0, 0, 0, 0.788);
+}
+#msgdecode {
+    text-align: center;
+    border-color:  rgba(206, 28, 96, 0.582);
+}
     
-.caixa3 {
+.desloc {
     display: inherit;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.685);
@@ -86,20 +88,20 @@ body {
     text-align: center;
 }
 
-    #bot1 {
-        color: white;
-        background: rgba(255, 16, 96, 0.788);
-        border-radius: 50px;
+#bot1 {
+    color: white;
+    background: rgba(255, 16, 96, 0.788);
+    border-radius: 50px;
 }
-    #bot1:hover {
-        background: black;
+#bot1:hover {
+    background: black;
 }
 
-    #bot2 {
-        color: white;
-        background: rgba(255, 16, 96, 0.788);
-        border-radius: 50px;
+#bot2 {
+    color: white;
+    background: rgba(255, 16, 96, 0.788);
+    border-radius: 50px;
 }
-    #bot2:hover {
-        background: black;
+#bot2:hover {
+    background: black;
 }

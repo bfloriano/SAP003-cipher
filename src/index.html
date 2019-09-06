@@ -18,28 +18,30 @@
     </div> 
 
     <form class = "caixas">
-      <div class = "caixa1" >
+  
+      <div class = "caixa entrada" >
         <p><strong>Digite sua mensagem à ser codificada:</strong></p>
-        <input type="text" name="msg" id="msg">
+        <input type="text" name="msgcode" id="msgcode">
         <p><strong>Digite sua mensagem à ser decifrada:</strong></p>
-        <input type="text" name="msg2" id="msg2">
+        <input type="text" name="msgdecode" id="msgdecode">
       </div>
-      <div class = "caixa2" >
+      <div class = "caixa saida" >
         <p><strong>Sua mensagem codificada é:</strong></p>
-        <div id = "result"></div>
+        <div id = "resultcode"></div>
         <p><strong>Sua mensagem decifrada é:</strong></p>
-        <div id = "result2"></div>
+        <div id = "resultdecode"></div>
       </div>
+    
     </form>
 
-    <form class = "caixa3">
+    <form class = "caixa desloc">
       <p><strong>Qual o valor da chave?</strong></p>
       <input type="number" name="offset" id="offset">
     </form>
       
     <form class = "botons">
-      <input id = "bot1" type="submit" value="codificar">
-      <input id = "bot2" type="submit" value="decifrar">
+      <button id="bot1">codificar</button>
+      <button id="bot2">decifrar</button>
     </form>
 
     <script src="cipher.js"></script>

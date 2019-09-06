@@ -4,44 +4,37 @@ window.cipher = {
 };
   
 function encode(deslocamento, mensagem) {
-  let result2 = "";
+  let result = "";
   for (let i = 0; i < mensagem.length; i++) {
-    if (mensagem[i].charCodeAt() >= 65 && mensagem[i].charCodeAt() <= 90) {
-      let result1 = ((mensagem[i].charCodeAt() - 65 + deslocamento) % 26 ) + 65;
-      result2 += String.fromCharCode(result1);
-    } else if (mensagem[i].charCodeAt() >= 97 && mensagem[i].charCodeAt() <= 122) {
-      let result1 = ((mensagem[i].charCodeAt() - 97 + deslocamento) % 26 ) + 97;
-      result2 += String.fromCharCode(result1);
-    // } else if (mensagem[i].charCodeAt() >= 32 && mensagem[i].charCodeAt() <=64 || 
-    //   mensagem[i].charCodeAt() >= 91 && mensagem[i].charCodeAt() <= 96 ||
-    //   mensagem[i].charCodeAt() >= 123 && mensagem[i].charCodeAt() <= 255) {
-    //   let result1 = mensagem[i].charCodeAt(); 
-    //   result2 += String.fromCharCode(result1);
+    const letterCode = mensagem[i].charCodeAt();
+    const toUpperCase = letterCode >= 65 && letterCode <= 90;
+    const toLowerCase = letterCode >= 97 && letterCode <= 122;
+    
+    if (toUpperCase) {
+      result += String.fromCharCode(((letterCode - 65 + deslocamento) % 26 ) + 65);
+    } else if (toLowerCase) {
+      result += String.fromCharCode(((letterCode - 97 + deslocamento) % 26 ) + 97);
     } else {
-      result2 += mensagem[i];
+      result += mensagem[i];
     }
   }
-  return result2;
+  return result;
 }
 
 function decode(deslocamento, mensagem) {
-  let result2 = "";
+  let result = "";
   for (let i = 0; i < mensagem.length; i++) {
-    if (mensagem[i].charCodeAt() >= 65 && mensagem[i].charCodeAt() <= 90) {
-      let result1 = ((mensagem[i].charCodeAt() - 90 - deslocamento) % 26 ) + 90;
-      result2 += String.fromCharCode(result1);
-    } else if (mensagem[i].charCodeAt() >= 97 && mensagem[i].charCodeAt() <= 122) {
-      let result1 = ((mensagem[i].charCodeAt() - 122 - deslocamento) % 26 ) + 122;
-      result2 += String.fromCharCode(result1);
-    // } else if (mensagem[i].charCodeAt() >= 32 && mensagem[i].charCodeAt() <=64 || 
-    //   mensagem[i].charCodeAt() >= 91 && mensagem[i].charCodeAt() <= 96 ||
-    //   mensagem[i].charCodeAt() >= 123 && mensagem[i].charCodeAt() <= 255) {
-    //   let result1 = mensagem[i].charCodeAt();
-    //   result2 += String.fromCharCode(result1);
-    // } 
+    const letterCode = mensagem[i].charCodeAt();
+    const toUpperCase = letterCode >= 65 && letterCode <= 90;
+    const toLowerCase = letterCode >= 97 && letterCode <= 122;
+
+    if (toUpperCase) {
+      result += String.fromCharCode(((letterCode - 90 - deslocamento) % 26 ) + 90);
+    } else if (toLowerCase) {
+      result += String.fromCharCode(((letterCode - 122 - deslocamento) % 26 ) + 122);
     } else {
-      result2 += mensagem[i];
+      result += mensagem[i];
     }
   }
-  return result2;
+  return result;
 }

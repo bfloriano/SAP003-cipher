@@ -3,21 +3,21 @@ document.getElementById("bot2").addEventListener("click", descriptografar);
 
 function criptografar() {
   event.preventDefault();
-  let msg = document.getElementById("msg").value;
-  let key = Number(document.getElementById("offset").value);
-  let resultado = document.getElementById("result");
+  const msg = document.getElementById("msgcode").value;
+  const key = Number(document.getElementById("offset").value);
+  const resultado = document.getElementById("resultcode");
 
-  let result3 = window.cipher.encode(key, msg);
-  resultado.innerHTML = `${result3}`;
+  const exibir = window.cipher.encode(key, msg);
+  resultado.innerHTML = `${exibir}`;
 }
 
 function descriptografar() {
   event.preventDefault();
-  let msg = document.getElementById("msg2").value;
-  let key = Number(document.getElementById("offset").value);
-  let resultado = document.getElementById("result2");
+  const msg = document.getElementById("msgdecode").value;
+  const key = Number(document.getElementById("offset").value);
+  const resultado = document.getElementById("resultdecode");
 
-  let result3 = window.cipher.decode(key, msg);
-  resultado.innerHTML = `${result3}`; 
+  const exibir = window.cipher.decode(key, msg);
+  resultado.innerHTML = `${exibir}`; 
 }
 
