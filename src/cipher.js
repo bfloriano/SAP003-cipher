@@ -3,37 +3,37 @@ window.cipher = {
   decode: decode,
 };
   
-function encode(deslocamento, mensagem) {
+function encode (key, msg) {
   let result = "";
-  for (let i = 0; i < mensagem.length; i++) {
-    const letterCode = mensagem[i].charCodeAt();
+  for (let i of msg) {
+    const letterCode = i.charCodeAt();
     const toUpperCase = letterCode >= 65 && letterCode <= 90;
     const toLowerCase = letterCode >= 97 && letterCode <= 122;
     
     if (toUpperCase) {
-      result += String.fromCharCode(((letterCode - 65 + deslocamento) % 26 ) + 65);
+      result += String.fromCharCode(((letterCode - 65 + key) % 26 ) + 65);
     } else if (toLowerCase) {
-      result += String.fromCharCode(((letterCode - 97 + deslocamento) % 26 ) + 97);
+      result += String.fromCharCode(((letterCode - 97 + key) % 26 ) + 97);
     } else {
-      result += mensagem[i];
+      result += i;
     }
   }
   return result;
 }
 
-function decode(deslocamento, mensagem) {
+function decode (key, msg) {
   let result = "";
-  for (let i = 0; i < mensagem.length; i++) {
-    const letterCode = mensagem[i].charCodeAt();
+  for (let i of msg) {
+    const letterCode = i.charCodeAt();
     const toUpperCase = letterCode >= 65 && letterCode <= 90;
     const toLowerCase = letterCode >= 97 && letterCode <= 122;
 
     if (toUpperCase) {
-      result += String.fromCharCode(((letterCode - 90 - deslocamento) % 26 ) + 90);
+      result += String.fromCharCode(((letterCode - 90 - key) % 26 ) + 90);
     } else if (toLowerCase) {
-      result += String.fromCharCode(((letterCode - 122 - deslocamento) % 26 ) + 122);
+      result += String.fromCharCode(((letterCode - 122 - key) % 26 ) + 122);
     } else {
-      result += mensagem[i];
+      result += i;
     }
   }
   return result;

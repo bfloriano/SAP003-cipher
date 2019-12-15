@@ -13,7 +13,7 @@ body {
 }
 
 
-.caixas {
+.box {
     display: flex;
     justify-content: space-between;
     text-align: center; 
@@ -23,7 +23,7 @@ body {
     background-size: 45%;
     align-content: center;
 }
-.entrada {
+.box-in {
     background-color: rgba(255, 255, 255, 0.705);
     color:  rgba(184, 17, 73, 0.788);
     text-shadow: 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.788);
@@ -32,7 +32,7 @@ body {
     width: 400px;  
     border-radius: 5px;
 } 
-.saida {
+.box-out {
     background-color: rgba(255, 255, 255, 0.705);
     color:  rgba(184, 17, 73, 0.788);
     text-shadow: 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.788);
@@ -65,7 +65,7 @@ body {
     border-color:  rgba(206, 28, 96, 0.582);
 }
     
-.desloc {
+.box-key {
     display: inherit;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.685);
@@ -84,24 +84,15 @@ body {
     border-color: rgb(206, 28, 96);
 }
 
-.botons {
+.button {
     text-align: center;
 }
 
-#bot1 {
+#btn1, #btn2 {
     color: white;
     background: rgba(255, 16, 96, 0.788);
     border-radius: 50px;
 }
-#bot1:hover {
-    background: black;
-}
-
-#bot2 {
-    color: white;
-    background: rgba(255, 16, 96, 0.788);
-    border-radius: 50px;
-}
-#bot2:hover {
+#btn1:hover, #btn2:hover {
     background: black;
 }

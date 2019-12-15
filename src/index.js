@@ -1,5 +1,5 @@
-document.getElementById("bot1").addEventListener("click", criptografar);
-document.getElementById("bot2").addEventListener("click", descriptografar);
+document.getElementById("btn1").addEventListener("click", criptografar);
+document.getElementById("btn2").addEventListener("click", descriptografar);
 
 function criptografar() {
   event.preventDefault();
